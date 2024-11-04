@@ -1,0 +1,45 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.main .container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
+    border-radius: 10px;
+    background-color: var(--second-color);
+    width: 40vh;
+    margin: 1vh 0;
+    text-align: center;
+}
+
+.main .container a:hover {
+    transform: scale(.9);
+}
+
+.main .container a img {
+    width: 20vh;
+    border-radius: 10px;
+}
+
+.main .container a p {
+    font-size: 1.5em;
+}
+
+@media only screen and (max-width: 400px) {
+    .main .container a {
+        width: 80%;
+    }
+}

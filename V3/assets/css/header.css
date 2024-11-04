@@ -1,0 +1,80 @@
+.header {
+    background-color: var(--second-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+    border-radius: 0 0 10px 10px;
+}
+
+.header .logo:hover {
+    transform: rotate(25deg);
+}
+
+.header .logo img {
+    width: 64px;
+    border-radius: 50%;
+}
+
+.header .links {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.header .links a {
+    font-size: 1.5em;
+    color: #fff;
+    padding: 1vh;
+    border-radius: 5px;
+}
+
+.header .links a:hover, .header .links .active {
+    background-color: var(--second-color-variant);
+}
+
+.header .theme {
+    padding: 1vh;
+}
+
+.header .theme form {
+    margin: 0;
+}
+
+.header .theme form button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+    .header .links {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .header .links {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header div {
+        margin: 1vh 0;
+    }
+
+    .header .links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .links a {
+        margin: 1vh 0;
+    }
+}

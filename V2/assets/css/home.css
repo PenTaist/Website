@@ -1,0 +1,73 @@
+main {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: fixed;
+    border-radius: 10px;
+    margin-top: 10vh;
+    padding: 3vh;
+    top: 20%;
+    right: 40%;
+    left: 40%;
+}
+
+main .box img {
+    border-radius: 50%;
+    padding: 2vh;
+}
+
+main .box p {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 2vh 0;
+}
+
+main .box .name {
+    font-size: 2em;
+}
+
+main .box .networks {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .box div a:hover {
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1065px) {
+    main {
+        left: 35%;
+        right: 35%;
+    }
+}
+
+@media only screen and (max-width: 709px) {
+    main {
+        left: 30%;
+        right: 30%;
+    }
+}
+
+@media only screen and (max-width: 532px) {
+    main {
+        left: 25%;
+        right: 25%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    main {
+        left: 20%;
+        right: 20%;
+    }
+}
+
+@media only screen and (max-width: 354px) {
+    main {
+        left: 15%;
+        right: 15%;
+    }
+}

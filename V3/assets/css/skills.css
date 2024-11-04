@@ -1,0 +1,396 @@
+.main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main .container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10vh;
+}
+
+.main .container .button {
+    color: var(--text-color);
+    font-size: 1.5em;
+    padding: 5vh;
+    border-radius: 10px;
+    width: 30vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+main .container .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(5px);
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main .container .button p {
+    position: relative;
+    z-index: 2;
+}
+
+.main .container .button:first-child::before {
+    background-image: url('https://marqueinconnue.com/wp-content/uploads/2019/01/devenir-developpeur-informatique.jpg');
+}
+
+.main .container .button:nth-child(2)::before {
+    background-image: url('https://cdn.futura-sciences.com/cdn-cgi/image/width=1024,quality=50,format=auto/sources/images/Reseau-informatique-connexion.jpeg');
+}
+
+.main .container .button:last-child::before {
+    background-image: url('https://www.apixit.fr/wp-content/uploads/2022/02/APIXIT-cybersecurite-SASE-SSE-1024x585.jpg');
+}
+
+.main .container .button:hover {
+    animation: anim-categories 1s infinite;
+}
+
+@keyframes anim-categories {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .main .container .button {
+        width: 80%;
+        margin: 1vh 0;
+    }
+
+    @keyframes anim-categories {
+        0% {
+            transform: scale(1);
+        }
+    
+        50% {
+            transform: scale(.9);
+        }
+    
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+.main .container .back {
+    position: absolute;
+    top: 12vh;
+    left: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    padding: 1.5vh;
+    border-radius: 5px;
+    background-color: var(--second-color);
+    font-size: 1.3em;
+}
+
+.main .container .back:hover {
+    transform: translateX(-5px);
+}
+
+@media only screen and (max-width: 450px) {
+    .main .container .button {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main .container .back {
+        position: static;
+        width: 90%;
+        margin-top: 1vh;
+    }
+
+    .main .container .back:hover {
+        background-color: var(--second-color-variant);
+        transform: translateX(0);
+    }
+}
+
+.main .container .dev {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+main .container .dev .languages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main .container .dev .languages div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+main .container .dev .languages div .title {
+    font-size: 2em;
+    margin: 5vh 0;
+}
+
+main .container .dev .languages div .images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+main .container .dev .languages div .images img {
+    max-width: 20vh;
+    object-fit:contain;
+    height: auto;
+    display: block;
+}
+
+.main .container .dev .softwares {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main .container .dev .softwares .title {
+    font-size: 2em;
+    text-align: center;
+    margin: 5vh 0;
+}
+
+.main .container .dev .softwares .sections {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1vh 0;
+}
+
+.main .container .dev .softwares .sections .soft {
+    color: var(--text-color);
+    font-size: 1.5em;
+    padding: 5vh;
+    border-radius: 10px;
+    width: 30vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+main .container .dev .softwares .sections .soft::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main .container .dev .softwares .sections .soft p {
+    position: relative;
+    z-index: 2;
+}
+
+.main .container .dev .softwares .sections .mobile-apps::before {
+    background-image: url('/src/skills/dev/mobile-apps.jpg');
+}
+
+.main .container .dev .softwares .sections .websites::before {
+    background-image: url('/src/skills/dev/websites.jpg');
+}
+
+.main .container .dev .softwares .sections .linux-windows-scripts::before {
+    background-image: url('/src/skills/dev/scripts.jpg');
+}
+
+.main .container .dev .softwares .sections .little-programs::before {
+    background-image: url('/src/skills/dev/little-programs.jpg');
+}
+
+@media only screen and (max-width: 1250px) {
+    .main .container .dev .softwares .sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .container .dev .softwares .sections .soft {
+        margin: 1vh 0;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .main .container .dev .softwares .sections .soft {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .main .container .dev .title {
+        font-size: 1.5em;
+    }
+
+    .main .container .dev .languages div .images img {
+        max-width: 10vh;
+    }
+}
+
+main .container .networks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    width: 100%;
+}
+
+main .container .networks div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main .container .networks div .title {
+    font-size: 2em;
+    text-align: center;
+}
+
+main .container .networks div .list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main .container .networks div .list .item {
+    color: var(--text-color);
+    font-size: 1.5em;
+    padding: 5vh;
+    border-radius: 10px;
+    width: 30vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+main .container .networks div .list .item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main .container .networks div .list .item p {
+    position: relative;
+    z-index: 2;
+}
+
+.main .container .networks div .list .basics::before {
+    background-image: url('/src/skills/networks/bases.jpg');
+}
+
+.main .container .networks div .list .security::before {
+    background-image: url('/src/skills/networks/security.jpg');
+}
+
+.main .container .networks div .list .servers-systems::before {
+    background-image: url('/src/skills/networks/servers.jpg');
+}
+
+.main .container .networks div .list .active-directory::before {
+    background-image: url('/src/skills/networks/windows.jpg');
+}
+
+main .cyber {
+    width: 100%;
+}
+
+main .cyber .container {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main .cyber .container .title {
+    font-size: 2em;
+    text-align: center;
+}
+
+main .cyber .container div {
+    width: 100%;
+    margin: 1vh 0;
+}
+
+main .cyber .container div .images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+main .cyber .container div .images img {
+    max-width: 20vh;
+    object-fit:contain;
+    height: auto;
+    display: block;
+}

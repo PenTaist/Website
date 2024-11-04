@@ -1,0 +1,8 @@
+RewriteEngine On
+
+ErrorDocument 404 /assets/php/templates/errors/404.php
+ErrorDocument 403 /assets/php/templates/errors/403.php
+ErrorDocument 500 /assets/php/templates/errors/500.php
+
+RewriteRule ^skills$ /assets/php/pages/skills.php [L]
+RewriteRule ^projects$ /assets/php/pages/projects.php [L]

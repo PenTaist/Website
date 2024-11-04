@@ -1,0 +1,82 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main .presentation .title {
+    font-size: 3em;
+    margin: 2vh 0;
+}
+
+.main .presentation .text {
+    font-size: 1.3em;
+}
+
+.main .social {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main .social .center {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 5vh 0;
+}
+
+.main .social .center a {
+    padding: 5vh;
+    border-radius: 10px;
+}
+
+.main .social .center a:hover {
+    transform: scale(.9);
+}
+
+.main .social .center .discord {
+    background-color: #5166F7;
+}
+
+.main .social .center .github {
+    background-color: #fff;
+}
+
+.main .social .center .telegram {
+    background-color: #37ABE1;
+}
+
+@media only screen and (max-width: 860px) {
+    .main .social .center {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main .social .center a {
+        margin: 1vh 0;
+        padding: 1vh;
+    }
+
+    .main .social .center a:hover {
+        transform: scale(.95);
+    }
+
+    .main .social .center a svg {
+        width: 64px;
+        height: 64px;
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+    .main .presentation .title {
+        font-size: 2em;
+    }
+
+    .main .presentation .text {
+        font-size: 1em;
+    }
+}
