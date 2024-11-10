@@ -11,6 +11,20 @@
     margin-top: 10vh;
 }
 
+main .container .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(5px);
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .main .container .button {
     color: var(--text-color);
     font-size: 1.5em;
@@ -27,35 +41,9 @@
     font-weight: 700;
 }
 
-main .container .button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: blur(5px);
-    z-index: 1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .main .container .button p {
     position: relative;
     z-index: 2;
-}
-
-.main .container .button:first-child::before {
-    background-image: url('https://marqueinconnue.com/wp-content/uploads/2019/01/devenir-developpeur-informatique.jpg');
-}
-
-.main .container .button:nth-child(2)::before {
-    background-image: url('https://cdn.futura-sciences.com/cdn-cgi/image/width=1024,quality=50,format=auto/sources/images/Reseau-informatique-connexion.jpeg');
-}
-
-.main .container .button:last-child::before {
-    background-image: url('https://www.apixit.fr/wp-content/uploads/2022/02/APIXIT-cybersecurite-SASE-SSE-1024x585.jpg');
 }
 
 .main .container .button:hover {

@@ -9,21 +9,35 @@
     <script>document.getElementById('header-projects').classList.add('active');</script>
     <main class="main">
         <div class="container">
-            <a href="https://www.fiberbot.fr/" target="_blank" class="fiberbot">
-                <p class="text">FiberBot</p>
-                <img src="/src/projects/fiberbot.png" alt="fiberbot" class="logo">
-                <p class="desc">Bot Discord</p>
-            </a>
-            <a href="" class="blockfarmers">
-                <p class="text">BlockFarmers</p>
-                <img src="/src/projects/blockfarmers.png" alt="blockfarmers" class="logo">
-                <p class="desc">Serveur Minecraft (fermé)</p>
-            </a>
-            <a href="" class="softlightgames">
-                <p class="text">SoftLightGames</p>
-                <img src="/src/projects/softlightgames.png" alt="softlightgames" class="logo">
-                <p class="desc">Site internet</p>
-            </a>
+            <?php
+                $get_projects_sql = "SELECT * FROM projects";
+                $get_projects_req = $db->query($get_projects_sql);
+                $get_projects = $get_projects_req->fetchAll(PDO::FETCH_ASSOC);
+                $count_projects = $get_projects_req->rowCount();
+
+                if ($count_projects > 0) {
+                    foreach ($get_projects as $project) {
+                        $name = $project['name'];
+                        $description = $project['description'];
+                        $image = $project['image'];
+                        $url = $project['url'];
+
+                        if ($url == '#') {
+                            $target = "";
+                        } else {
+                            $target = "_blank";
+                        }
+                        
+                        echo '
+                            <a href="'.$url.'" target="'.$target.'" class="'.$name.' project">
+                                <p class="text">'.$name.'</p>
+                                <img src="'.$image.'" alt="'.$name.'" class="logo">
+                                <p class="desc">'.$description.'</p>
+                            </a>
+                        ';
+                    }
+                }
+            ?>
         </div>
     </main>
 </body>

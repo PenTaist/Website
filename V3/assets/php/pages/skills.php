@@ -10,7 +10,6 @@
     <main class="main">
         <div class="container">
             <?php
-            
                 $category = $_GET['category'];
 
                 if ($category == 'dev') {
@@ -20,13 +19,28 @@
                 } elseif ($category == 'cyber') {
                     include $_SERVER['DOCUMENT_ROOT'].'/assets/php/pages/skills/cyber.php';
                 } else {
-                    echo '
-                        <a href="?category=dev" class="button cat-dev"><p>Développement</p></a>
-                        <a href="?category=networks" class="button cat-networks"><p>Réseaux</p></a>
-                        <a href="?category=cyber" class="button cat-cyber"><p>Cyber-Sécurité</p></a>
-                    ';
+                    $get_skills_sql = "SELECT * FROM skills WHERE enabled = 1";
+                    $get_skills_req = $db->query($get_skills_sql);
+                    $get_skills = $get_skills_req->fetchAll(PDO::FETCH_ASSOC);
+                    $count_skills = $get_skills_req->rowCount();
+
+                    if ($count_skills > 0) {
+                        foreach ($get_skills as $skills) {
+                            $name = $skills['name'];
+                            $front_name = $skills['front_name'];
+                            $image = $skills['image'];
+
+                            echo '<a href="category='.$name.'" class="button cat-'.$name.'"><p>'.$front_name.'</p></a>';
+                            echo '
+                                <style>
+                                    .main .container .cat-'.$name.'::before {
+                                        background-image: url(\''.$image.'\');
+                                    }
+                                </style>
+                            ';
+                        }
+                    }
                 }
-            
             ?>
         </div>
     </main>

@@ -36,18 +36,6 @@
     transform: scale(.9);
 }
 
-.main .social .center .discord {
-    background-color: #5166F7;
-}
-
-.main .social .center .github {
-    background-color: #fff;
-}
-
-.main .social .center .telegram {
-    background-color: #37ABE1;
-}
-
 @media only screen and (max-width: 860px) {
     .main .social .center {
         flex-direction: column;
